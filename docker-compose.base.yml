@@ -43,6 +43,5 @@ volumes:
   portainer_data:
 
 networks:
-  default:
-    external:
-      name: nginx-proxy-network
+  nginx-proxy-network:
+    external: true
