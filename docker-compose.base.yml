@@ -18,6 +18,9 @@ services:
       - html:/usr/share/nginx/html
       - vhost:/etc/nginx/vhost.d
       - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks: 
+      - default
+      - nginx-proxy-network
 
   # |---------------------------|
   # |   Nginx proxy companion   |
@@ -38,3 +41,8 @@ volumes:
   html:
   vhost:
   portainer_data:
+
+networks:
+  default:
+    external:
+      name: nginx-proxy-network
