@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+
+  # |---------------------------|
+  # |   Nginx proxy companion   |
+  # |---------------------------|
+
+  nginx-proxy-letsencrypt:
+      env_file:
+        - .env/production/nginx-proxy-companion
